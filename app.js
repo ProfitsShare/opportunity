@@ -754,7 +754,8 @@ function copyCode() {
     const code = input.value;
 
     const message = `Hi 👋
-Check out this opportunity : https://earnreaf.github.io/opportunity/about.html
+Check out this opportunity : https://profitsshare.github.io/opportunity/#app
+
 Use code: ${code}`;
 
     navigator.clipboard.writeText(message)
@@ -839,8 +840,8 @@ Use my referral code: ${refCode}`;
         box.innerHTML = `
             <div class="msg-line">Hi 👋</div>
             <div class="msg-line">Check this out:</div>
-            <a href="https://earnreaf.github.io/opportunity/about.html" target="_blank">
-                https://earnreaf.github.io/opportunity/about.html
+            <a href="https://profitsshare.github.io/opportunity/#app" target="_blank">
+               https://profitsshare.github.io/opportunity/#app
             </a>
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
