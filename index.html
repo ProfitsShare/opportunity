@@ -195,79 +195,13 @@
 
 
     <!-- ALWAYS VISIBLE -->
-     <h3 id="username">👤 @demo</h3>
+     <h3 id="username">👤 @ user</h3>
  
-<div class="shop">
-
-  <button onclick="closeShop()" class="sell-back-btn">← Back</button>
-
-  <div class="store-header">
-    <h2>🛒 ProfitsStore</h2>
-    <p>Buy digital products & earn commissions on every referral</p>
-  </div>
-
-  <div class="book-grid premium">
-
-    <!-- PRODUCT 1 -->
-    <div class="book-card premium">
-      <div class="book-image">
-        <img src="https://raw.githubusercontent.com/EarnReaf/opportunity/main/cover.png">
-
-        <div class="book-overlay">
-        <button id="btn-book1" onclick="handleBook('book1')">Order Now</button>
-        </div>
-      </div>
-
-      <div class="book-info">
-        <h4>It Was Always You</h4><p>
-A heartfelt love story about fate, and realizing that the right person was there all along.
-</p>
-
-        <div class="book-bottom">
-          <span>KSh 1200</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- PRODUCT 2 -->
-    <div class="book-card premium">
-      <div class="book-image">
-        <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
-
-        <div class="book-overlay">
-          <button id="btn-book2" onclick="handleBook('book2')">Order Now</button>
-        </div>
-      </div>
-
-      <div class="book-info">
-        <h4>Kenyan Side-Hustle Playbook</h4>
-        <p>Learn simple strategies to start earning online in Kenya.</p>
-
-        <div class="book-bottom">
-          <span>KSh 1200</span>
-          <small>+ Earn KSh 600 per referral</small>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-</div>
 
 <div class="account">
-          <!-- Digital Value Asset Row -->
-        <div class="asset-card">
-            <div class="pdf-icon">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-            </div>
-            <div class="asset-meta">
-                <div class="asset-title">Kenyan Side-Hustle Playbook</div>
-                <div class="asset-size">PDF VALUE GATE</div>
-            </div>
-           <button class="read-btn" id="actionBtn">GET</button>
-        </div>
+
     
-    <h3 id="totaleanings">Total Commissions</h3>
+    <h3 id="totaleanings">Earnings balance</h3>
     <div class="balance" id="balance">KSH 0</div>
 
     
@@ -283,26 +217,26 @@ A heartfelt love story about fate, and realizing that the right person was there
 </div>
   
     <button class="withdraw-btn">Withdraw</button>
-    <button class="shop-btn" onclick="openShop()">Shop</button>
+  
   
 </div>
 
             <!-- Affiliate URL Management Area -->
 <div class="invite-frame">
     <p style="font-size:12px; color:var(--text-dark); margin-bottom:8px;">
-        Your affiliate link and code:
+        Invite a friend and earn Ksh 50:
     </p>
 
     <div class="link-row">
         <div id="inviteMessageBox" class="invite-message-box">
             <!-- JS injects message here -->
-             Links and your Code Appears Here!!
+             Your link will Appear Here!!
         </div>
     </div>
 
     <!-- Action button (JS controls behavior) -->
     <button id="getCodeBtnPopup" type="button" onclick="getCode()">
-      Become a Member
+      Start Earning Now
     </button>
 </div>
 </div>
@@ -419,9 +353,9 @@ A heartfelt love story about fate, and realizing that the right person was there
     <div class="subtitle">You're ONLY one step away.</div>
 
     <div class="step">
-       Ksh 1,200/ year
+       Ksh 100
       <div class="pay-box" onclick="openlink()">
-        <div class="amount">Unlock your 50% per sale commissions plus Get one book Free</div>
+        <div class="amount">Click to Unlock your Link and start earning 50/- Per Friend you invite</div>
       </div>
     </div>
 
@@ -429,15 +363,13 @@ A heartfelt love story about fate, and realizing that the right person was there
       <input id="mpesaPhone" type="tel" placeholder="Enter Mpesa number used to pay">
     </div>
     <div id="usedNumbersList" class="used-numbers"></div>
-    <p class="payment-warning">
-  This is where all the numbers you used to attempt payment will be listed. 
-  Once one of these numbers completes the payment, then you will be activated.
-</p>
-    <button onclick="confirmPaid()">Confirm i have paid</button>
-    <button id="cancel-mpesa-btn" onclick="closeMpesa()">
+
+
+
+  <button onclick="confirmPaid()">Verify i have paid</button>
+  <button id="cancel-mpesa-btn" onclick="closeMpesa()">
   Cancel
 </button>
-
   </div>
 
 </div>

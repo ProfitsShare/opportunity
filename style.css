@@ -60,8 +60,12 @@ h1 {
 }
 
 .used-number-item{
-    color: black;
+    color: rgb(255, 255, 255);
 }
+
+
+
+
 
 .hero{
 display:flex;
@@ -202,6 +206,7 @@ transform:scale(1.05);
 .sidebar h2 {
     color: #ff0050;
     margin-bottom: 30px;
+    font-size: 18px;
 }
 
 .sidebar ul {
@@ -1563,7 +1568,7 @@ transform:scale(1.05);
 .mpesa-popup{
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.91);
+    background:rgb(38 38 38 / 96%);
 
     display: none;
 
@@ -1634,7 +1639,7 @@ transform:scale(1.05);
 .mpesa-popup .popup{
   width:95%;
   max-width:400px;
-  background:#ffffff;
+  background:#000000;
   border-radius:18px;
   padding:22px;
   box-shadow:0 12px 30px rgba(0,0,0,0.08),
@@ -1645,13 +1650,13 @@ transform:scale(1.05);
 .mpesa-popup .title{
   font-size:19px;
   font-weight:700;
-  color:#0f172a;
+  color:#ffffff;
   margin-bottom:6px;
 }
 
 .mpesa-popup .subtitle{
   font-size:16px;
-  color:#525252;
+  color:#ffffff;
   margin-bottom:18px;
 }
 
@@ -1659,7 +1664,7 @@ transform:scale(1.05);
 .mpesa-popup .step{
   margin-bottom:18px;
   font-size:14px;
-  color:#1f2937;
+  color:#ffffff;
 }
 
 /* Pay box */
@@ -1667,15 +1672,14 @@ transform:scale(1.05);
   margin-top:8px;
   padding:14px;
   border-radius:14px;
-  background:#f9fafb;
-  border:1px solid #e5e7eb;
+  background:black;
   text-align:center;
 }
 
 .mpesa-popup .amount{
   font-size:24px;
   font-weight:700;
-  color:#000000;
+  color:#ffffff;
   margin-bottom:6px;
 }
 
@@ -1709,17 +1713,18 @@ transform:scale(1.05);
   margin-top:8px;
   padding:12px;
   border-radius:12px;
-  border:1px solid #d1d5db;
-  background:#fff;
+  border:1px solid #5e5e5e;
+  background:#000000;
   font-size:14px;
   outline:none;
-  color:#111827;
+  color:#ffffff;
 }
 
 /* Button (STRICTLY scoped) */
 .mpesa-popup button{
-  width:100%;
+  width: 100%;
   margin-top:16px;
+  margin-right: 10px;
   padding:13px;
   border:none;
   border-radius:14px;
@@ -1728,6 +1733,7 @@ transform:scale(1.05);
   background:linear-gradient(135deg,#16a34a,#15803d);
   color:white;
   cursor:pointer;
+
 }
 
 
@@ -2074,6 +2080,10 @@ transform:scale(1.05);
     margin-top: 8px;
 }
 
+#paydiv{
+    width: 100%;
+}
+
 #cancel-mpesa-btn{
   width: 100%;
   margin-top: 10px;
@@ -2130,7 +2140,7 @@ transform:scale(1.05);
 
     .sidebar h2 {
         margin: 0;
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .sidebar ul {
@@ -2391,7 +2401,7 @@ display: none;
 }
 
 .amount {
-    background-color: #49c513; /* M-Pesa Green for trust */
+    background-color: #15803d; /* M-Pesa Green for trust */
     color: white;
     padding: 16px;
     border-radius: 8px;

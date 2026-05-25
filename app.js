@@ -44,13 +44,7 @@ function hideLoader() {
 
 let subscribed = false; // default (not paid)
 
-if (subscribed) {
-    document.getElementById("btn-book1").textContent = "Read Now";
-    document.getElementById("btn-book2").textContent = "Read Now";
-} else {
-    document.getElementById("btn-book1").textContent = "Order Now";
-    document.getElementById("btn-book2").textContent = "Order Now";
-}
+
 
 auth.onAuthStateChanged(async (user) => {
 
@@ -86,71 +80,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const books = {
-  book1: "https://drive.google.com/file/d/1KT46bG-_hLfD8f8sWpskmAyv-Rzci7Ql/view?usp=sharing",
-    book2: "https://drive.google.com/file/d/1xB_cWW6uaI0y8z8UX3dA5swCrnZRm_O-/view?usp=sharing",
-   };
-
-function openBook(id) {
-    window.open(books[id], "_blank");
-}
-
-
-function handleBook(bookId) {
-    const user = firebase.auth().currentUser;
-
-    if (!user) {
-        alert("Please login first");
-        setView("login");
-        return;
-    }
-
-    firebase.database().ref("users/" + user.uid)
-    .once("value")
-    .then(snap => {
-        const data = snap.val() || {};
-
-        const isSubscribed = data.isSubscribed === true;
-
-        if (isSubscribed) {
-            openBook(bookId);   // 📖 OPEN BOOK
-        } else {
-            openMpesa();        // 💰 PAYMENT
-        }
-    });
-}
-
-
-function updateReadButton(isSubscribed) {
-    const btn = document.getElementById("actionBtn");
-    if (!btn) return;
-
-    btn.textContent = isSubscribed ? "READ" : "Get";
-}
-
-document.getElementById("actionBtn").addEventListener("click", () => {
-    const user = auth.currentUser;
-
-    if (!user) {
-        alert("Login first");
-        setView("login");
-        return;
-    }
-
-    if (!currentUserData) {
-        alert("Loading user data...");
-        return;
-    }
-
-    if (currentUserData.isSubscribed === true) {
-        openBook("book1");
-    } else {
-        openMpesa();
-    }
-});
-
-
-
 /* =========================
    LOAD USER DATA REALTIME
 ========================= */
@@ -174,10 +103,6 @@ function loadUserData(userId) {
 document.getElementById("balance").innerText =
     "KSH " + Number(data.balance || 0).toFixed(2);
 
-        // ✅ single correct call
-      // ✅ update EVERYTHING that depends on subscription
-updateReadButton(data.isSubscribed);
-updateShopButtons(data.isSubscribed); // 🔥 THIS WAS MISSING
 
         hideLoader();
     });
@@ -393,6 +318,7 @@ await visitsRef.transaction(current => {
     ========================================================== */
     alert("Account created successfully!");
     form.reset();
+    setView("home");
 
   } catch (error) {
     console.error("Registration error:", error);
@@ -754,8 +680,7 @@ function copyCode() {
     const code = input.value;
 
     const message = `Hi 👋
-Check out this opportunity : https://profitsshare.github.io/opportunity/#app
-
+Check out this opportunity : https://earnreaf.github.io/opportunity/about.html
 Use code: ${code}`;
 
     navigator.clipboard.writeText(message)
@@ -777,7 +702,7 @@ function fitCodeInput() {
 
 function clearUI() {
 
-    document.getElementById("username").innerText = "👤 @ demo";
+    document.getElementById("username").innerText = "👤 @ user";
     document.getElementById("balance").innerText = "KSH 0.00";
 
     const codeInput = document.getElementById("userCode");
@@ -807,10 +732,10 @@ function listenInviteCodePopup(uid) {
         if (!isSubscribed || !refCode) {
             box.innerHTML = `
                 <div class="msg-line">Not activated yet</div>
-                <div class="msg-line">Complete activation to get your Affiliate link</div>
+                
             `;
 
-            btn.textContent = "Become a member & Pocket +600 Ksh Per Sale";
+            btn.textContent = "Invite & Start Earning Now";
 
 btn.onclick = () => {
     const user = auth.currentUser;
@@ -840,8 +765,8 @@ Use my referral code: ${refCode}`;
         box.innerHTML = `
             <div class="msg-line">Hi 👋</div>
             <div class="msg-line">Check this out:</div>
-            <a href="https://profitsshare.github.io/opportunity/#app" target="_blank">
-               https://profitsshare.github.io/opportunity/#app
+            <a href="https://earnreaf.github.io/opportunity/about.html" target="_blank">
+                https://earnreaf.github.io/opportunity/about.html
             </a>
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
@@ -912,6 +837,7 @@ function openMpesa() {
 
 function closeMpesa() {
     document.getElementById("mpesaPopup").style.display = "none"; closeInvitePopup();
+    infoBox.style.display = "none";
 }
 
 function copyTill() {
@@ -999,7 +925,7 @@ function listenUsedNumbers() {
         listDiv.innerHTML = "";
 
         if (!snapshot.exists()) {
-            listDiv.innerHTML = "<p style='color:#777;font-size:12px;'>No numbers used yet</p>";
+            listDiv.innerHTML = "<p style='color:#777;font-size:12px;'>No number used yet</p>";
             return;
         }
 
@@ -1009,7 +935,7 @@ function listenUsedNumbers() {
 
             listDiv.innerHTML += `
                 <div class="used-number-item">
-                    ${phone}
+                    ${phone} verification pending
                 </div>
             `;
         });
@@ -1119,10 +1045,6 @@ function payNow() {
         return;
     }
 
-    // direct redirect with uid
-    window.location.href =
-    "https://bloomtasker.great-site.net/callback.php?uid=" + user.uid;
-
 }
 
 document.getElementById("referralStep").addEventListener("submit", async (e) => {
@@ -1157,7 +1079,7 @@ document.getElementById("referralStep").addEventListener("submit", async (e) => 
 });
 
 function openlink(){
-     window.open("https://link.palpluss.com/626ecd40-7e28-46f6-aaec-84e136fe4d67", "_blank"); 
+     window.open("https://link.palpluss.com/be701663-5809-4323-9516-b28f8aec4b41", "_blank"); 
 }
 
 function setView(view) {
@@ -1177,60 +1099,10 @@ document.getElementById("closeSignupBtn").onclick = () => {
     setView("home");
 };
 
+const toggleBtn = document.getElementById("usedNumbersList");
+const infoBox = document.getElementById("usedNumbersInfo");
 
-function openShop() {
-    document.querySelector('.shop').classList.add('active');
-
-    // hide dashboard parts
-    document.querySelector('.account').style.display = 'none';
-    document.querySelectorAll('.section').forEach(el => el.style.display = 'none');
-}
-
-function closeShop() {
-    document.querySelector('.shop').classList.remove('active');
-
-    // show dashboard again
-    document.querySelector('.account').style.display = 'block';
-    document.querySelector('.section.referrals').style.display = 'block';
-}
-
-function handleBook1() {
-    const user = firebase.auth().currentUser;
-    if (!user) {
-        alert("Please login first");
-        return;
-    }
-
-    firebase.database().ref("users/" + user.uid)
-    .once("value")
-    .then(snap => {
-        const data = snap.val() || {};
-
-        const isUnlocked = data.subscribed || 
-                          (data.booksUnlocked && data.booksUnlocked.book1);
-
-        if (isUnlocked) {
-            openBook1();   // 📖 OPEN BOOK
-        } else {
-            openMpesa();   // 💰 GO TO PAYMENT
-        }
-    });
-}
-
-function updateShopButtons(isSubscribed) {
-
-    const buttons = [
-        { id: "btn-book1", book: "book1" },
-        { id: "btn-book2", book: "book2" }
-    ];
-
-    buttons.forEach(item => {
-        const btn = document.getElementById(item.id);
-        if (!btn) return;
-
-        btn.textContent = isSubscribed ? "📖 Read Now" : "🛒 Order Now";
-
-        // 🔥 ensure correct click behavior
-        btn.onclick = () => handleBook(item.book);
-    });
-}
+toggleBtn.addEventListener("click", () => {
+    infoBox.style.display =
+        infoBox.style.display === "block" ? "none" : "block";
+});
