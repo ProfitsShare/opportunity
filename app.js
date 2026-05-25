@@ -779,7 +779,7 @@ Use my referral code: ${refCode}`;
                 .then(() => {
                     btn.textContent = "Copied ✅";
                     setTimeout(() => {
-                        btn.textContent = "Copy Message";
+                        btn.textContent = "Share Message";
                     }, 1500);
                 })
                 .catch(() => alert("Copy failed"));
