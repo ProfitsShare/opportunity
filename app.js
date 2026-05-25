@@ -771,7 +771,7 @@ Use my referral code: ${refCode}`;
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
 
-        btn.textContent = "Copy Message";
+        btn.textContent = "Share Message";
 
         // IMPORTANT: remove old handlers safely
         btn.onclick = () => {
