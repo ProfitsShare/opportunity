@@ -2526,10 +2526,8 @@ text-align: left;
 
 /* INFO BOX */
 .reward-box{
-    background: #edf7ef;
-    border: 1px dashed #b7ebc6;
-
-    color: #1d6b3b;
+    background: #131313;
+    color: #09e05c;
 
     padding: 20px;
     border-radius: 16px;
