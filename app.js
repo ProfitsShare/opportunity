@@ -735,7 +735,7 @@ function listenInviteCodePopup(uid) {
                 
             `;
 
-            btn.textContent = "Activate & Start Earning Now";
+            btn.textContent = "Activate Now & Start Earning";
 
 btn.onclick = () => {
     const user = auth.currentUser;
@@ -758,15 +758,15 @@ setView("login");
         const messageText = `Hi 👋
 
 Check this out:
-https://earnreaf.github.io/opportunity/about.html
+https://profitsshare.github.io/opportunity/#app
 
 Use my referral code: ${refCode}`;
 
         box.innerHTML = `
             <div class="msg-line">Hi 👋</div>
             <div class="msg-line">Check this out:</div>
-            <a href="https://earnreaf.github.io/opportunity/about.html" target="_blank">
-                https://earnreaf.github.io/opportunity/about.html
+            <a href="https://profitsshare.github.io/opportunity/#app" target="_blank">
+                https://profitsshare.github.io/opportunity/#app
             </a>
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
