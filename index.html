@@ -223,9 +223,11 @@
 
             <!-- Affiliate URL Management Area -->
 <div class="invite-frame">
-    <p style="font-size:12px; color:var(--text-dark); margin-bottom:8px;">
-        Invite a friend and earn Ksh 50:
-    </p>
+
+    <!-- INFO -->
+    <div class="reward-box">
+      🎉 Invite friends & earn 50 Ksh for every successful referral!
+    </div>
 
     <div class="link-row">
         <div id="inviteMessageBox" class="invite-message-box">
@@ -307,6 +309,7 @@
     <div class="footer-col">
       <h3>Quick Links</h3>
       <ul>
+<li><a href="#" onclick="event.preventDefault(); showSection('dashboard')">Dashboard</a></li>
 <li><a href="#" onclick="event.preventDefault(); showSection('referrals')">Referrals</a></li>
 <li><a href="#" onclick="event.preventDefault(); showSection('payoutHistory')">Payouts</a></li>
       </ul>
@@ -344,31 +347,56 @@
 <!-- =========================
      M-PESA PAYMENT POPUP
 ========================= -->
-<div class="mpesa-popup" id="mpesaPopup" style="display: none;">
+<!-- SIMPLE M-PESA POPUP -->
+<div class="mpesa-popup" id="mpesaPopup">
 
-  <div class="popup mpesa-card">
+  <div class="simple-mpesa-card">
 
-   
-    <div class="subtitle">You're ONLY one step away.</div>
+    <!-- CLOSE -->
+    <div class="close-popup" onclick="closeMpesa()">✕</div>
 
-    <div class="step">
-       Ksh 100
-      <div class="pay-box" onclick="openlink()">
-        <div class="amount">Click to Unlock your Link and start earning 50/- Per Friend you invite</div>
+    <!-- NORMAL CONTENT -->
+    <div id="defaultMpesaContent">
+
+      <h2>Unlock Invite Code</h2>
+
+      <div class="price-box">
+        <span class="big-price">100 Ksh</span>
       </div>
+
+      <button class="continue-btn" onclick="openlink()">
+        Continue
+      </button>
+
+      <p class="manual-activate-text" onclick="toggleManualActivation()">
+        Press here if Automatic activation failed.
+      </p>
+
     </div>
 
-    <div class="step">
-      <input id="mpesaPhone" type="tel" placeholder="Enter Mpesa number used to pay">
+    <!-- MANUAL ACTIVATION -->
+    <div class="manual-activation-box" id="manualActivationBox">
+
+      <h2>Manual Activation</h2>
+
+      <input 
+        id="mpesaPhone" 
+        type="tel" 
+        placeholder="Enter Mpesa number used to pay"
+      >
+
+      <div id="usedNumbersList" class="used-numbers"></div>
+
+      <button class="confirm-paid-btn" onclick="confirmPaid()">
+        Verify i have paid
+      </button>
+
+      <button class="cancel-btn" onclick="toggleManualActivation()">
+        Back
+      </button>
+
     </div>
-    <div id="usedNumbersList" class="used-numbers"></div>
 
-
-
-  <button onclick="confirmPaid()">Verify i have paid</button>
-  <button id="cancel-mpesa-btn" onclick="closeMpesa()">
-  Cancel
-</button>
   </div>
 
 </div>

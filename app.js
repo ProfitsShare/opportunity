@@ -771,7 +771,7 @@ Use my referral code: ${refCode}`;
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
 
-        btn.textContent = "Share Message";
+        btn.textContent = "Copy Message";
 
         // IMPORTANT: remove old handlers safely
         btn.onclick = () => {
@@ -779,7 +779,7 @@ Use my referral code: ${refCode}`;
                 .then(() => {
                     btn.textContent = "Copied ✅";
                     setTimeout(() => {
-                        btn.textContent = "Share Message";
+                        btn.textContent = "Copy Message";
                     }, 1500);
                 })
                 .catch(() => alert("Copy failed"));
@@ -835,9 +835,16 @@ function openMpesa() {
     document.getElementById("mpesaPopup").style.display = "flex";
 }
 
-function closeMpesa() {
-    document.getElementById("mpesaPopup").style.display = "none"; closeInvitePopup();
-    infoBox.style.display = "none";
+function closeMpesa(){
+
+    document.getElementById("mpesaPopup").style.display = "none";
+
+    // RESET STATE
+    document.getElementById("defaultMpesaContent")
+        .style.display = "block";
+
+    document.getElementById("manualActivationBox")
+        .classList.remove("active");
 }
 
 function copyTill() {
@@ -850,9 +857,12 @@ function copyTill() {
 
 // CLOSE WHEN CLICKING OUTSIDE
 document.getElementById("mpesaPopup").addEventListener("click", function(e) {
-    const card = document.querySelector(".mpesa-card");
 
-    // if clicked outside the card
+    const card = document.querySelector(".simple-mpesa-card");
+
+    if (!card) return;
+
+    // close only when clicking outside card
     if (!card.contains(e.target)) {
         closeMpesa();
     }
@@ -1106,3 +1116,31 @@ toggleBtn.addEventListener("click", () => {
     infoBox.style.display =
         infoBox.style.display === "block" ? "none" : "block";
 });
+
+function toggleManualActivation(){
+
+    const defaultContent =
+        document.getElementById("defaultMpesaContent");
+
+    const manualBox =
+        document.getElementById("manualActivationBox");
+
+    const isOpen = manualBox.classList.contains("active");
+
+    if(isOpen){
+
+        // SHOW NORMAL SECTION
+        defaultContent.style.display = "block";
+
+        // HIDE MANUAL SECTION
+        manualBox.classList.remove("active");
+
+    } else {
+
+        // HIDE NORMAL SECTION
+        defaultContent.style.display = "none";
+
+        // SHOW MANUAL SECTION
+        manualBox.classList.add("active");
+    }
+}

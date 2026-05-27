@@ -60,7 +60,7 @@ h1 {
 }
 
 .used-number-item{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 
 
@@ -1560,31 +1560,6 @@ transform:scale(1.05);
     opacity: 0.9;
 }
 
-/* =========================
-   M-PESA POPUP
-========================= */
-
-/* ONLY affects M-Pesa popup */
-.mpesa-popup{
-    position: fixed;
-    inset: 0;
-    background:rgb(38 38 38 / 96%);
-
-    display: none;
-
-    align-items: flex-start;   /* 🔥 instead of center */
-    justify-content: center;
-
-    padding: 20px;             /* 🔥 gives breathing space */
-    overflow-y: auto;
-
-        scrollbar-width: none;          /* Firefox */
-    -ms-overflow-style: none;       /* IE/Edge */
-      z-index: 900000; /* 🔥 ADD THIS */
-  font-family:system-ui, -apple-system, sans-serif;
-
-}
-
 .book-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
@@ -1635,106 +1610,8 @@ transform:scale(1.05);
     opacity: 0.9;
 }
 
-/* Card */
-.mpesa-popup .popup{
-  width:95%;
-  max-width:400px;
-  background:#000000;
-  border-radius:18px;
-  padding:22px;
-  box-shadow:0 12px 30px rgba(0,0,0,0.08),
-             0 2px 8px rgba(0,0,0,0.05);
-}
 
-/* Text */
-.mpesa-popup .title{
-  font-size:19px;
-  font-weight:700;
-  color:#ffffff;
-  margin-bottom:6px;
-}
 
-.mpesa-popup .subtitle{
-  font-size:16px;
-  color:#ffffff;
-  margin-bottom:18px;
-}
-
-/* Step */
-.mpesa-popup .step{
-  margin-bottom:18px;
-  font-size:14px;
-  color:#ffffff;
-}
-
-/* Pay box */
-.mpesa-popup .pay-box{
-  margin-top:8px;
-  padding:14px;
-  border-radius:14px;
-  background:black;
-  text-align:center;
-}
-
-.mpesa-popup .amount{
-  font-size:24px;
-  font-weight:700;
-  color:#ffffff;
-  margin-bottom:6px;
-}
-
-.mpesa-popup .till{
-  font-size:13px;
-  color:#374151;
-  margin-bottom:10px;
-}
-
-/* Copy button */
-.mpesa-popup .copy{
-  display:inline-block;
-  padding:7px 14px;
-  font-size:12px;
-  border-radius:999px;
-  background:#111827;
-  color:#fff;
-  cursor:pointer;
-}
-
-/* Business */
-.mpesa-popup .business{
-  margin-top:8px;
-  font-size:12px;
-  color:#6b7280;
-}
-
-/* Input (STRICTLY scoped) */
-.mpesa-popup input{
-  width:100%;
-  margin-top:8px;
-  padding:12px;
-  border-radius:12px;
-  border:1px solid #5e5e5e;
-  background:#000000;
-  font-size:14px;
-  outline:none;
-  color:#ffffff;
-}
-
-/* Button (STRICTLY scoped) */
-.mpesa-popup button{
-  width: 100%;
-  margin-top:16px;
-  margin-right: 10px;
-  padding:13px;
-  border:none;
-  border-radius:14px;
-  font-weight:600;
-  font-size:14px;
-  background:linear-gradient(135deg,#16a34a,#15803d);
-  color:white;
-  cursor:pointer;
-
-}
 
 
 .how-it-works {
@@ -2579,4 +2456,203 @@ a, .msg-line{
 .book-bottom small {
     font-size: 11px;
     color: #ffb300;
+}
+
+
+/* BACKDROP */
+.mpesa-popup{
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.83);
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+    padding: 20px;
+}
+
+/* CARD */
+.simple-mpesa-card{
+    width: 100%;
+    max-width: 420px;
+
+    background: #fff;
+    border-radius: 24px;
+
+    padding: 30px 25px;
+
+    position: relative;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+
+    text-align: center;
+}
+
+/* CLOSE BUTTON */
+.close-popup{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    font-size: 24px;
+    color: #667085;
+
+    cursor: pointer;
+}
+
+/* TITLE */
+.simple-mpesa-card h2{
+color: #0f172a;
+text-align: left;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+/* PRICE */
+.price-box{
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.big-price{
+    color: #0f172a;
+    font-size: 30px;
+    font-weight: 800;
+}
+
+
+/* INFO BOX */
+.reward-box{
+    background: #edf7ef;
+    border: 1px dashed #b7ebc6;
+
+    color: #1d6b3b;
+
+    padding: 20px;
+    border-radius: 16px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    margin-bottom: 25px;
+}
+
+/* CONTINUE BUTTON */
+.continue-btn{
+    width: 100%;
+    padding: 18px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #08122f;
+    color: white;
+
+    font-size: 20px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+/* CANCEL BUTTON */
+.cancel-btn{
+    width: 100%;
+    padding: 16px;
+
+    border-radius: 14px;
+    border: 1px solid #d0d5dd;
+
+    background: white;
+    color: #667085;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 480px){
+
+    .simple-mpesa-card{
+        padding: 26px 18px;
+    }
+
+    .simple-mpesa-card h2{
+     color: #0f172a;
+     text-align: left;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    }
+
+    .big-price{
+        color: #0f172a;
+    font-size: 30px;
+    font-weight: 800;
+    }
+
+}
+
+.manual-activate-text{
+    margin-top: 16px;
+    font-size: 14px;
+    color: #2563eb;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.manual-activate-text:hover{
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.manual-activation-box{
+    display: none;
+    margin-top: 18px;
+    animation: fade 0.25s ease;
+}
+
+.manual-activation-box.active{
+    display: block;
+}
+
+.manual-activation-box input{
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    border: 1px solid #d0d5dd;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.manual-activation-box input:focus{
+    border-color: #2563eb;
+}
+
+.confirm-paid-btn{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #16a34a;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.confirm-paid-btn:hover{
+    opacity: 0.9;
+}
+
+.used-numbers{
+    margin-bottom: 12px;
 }
