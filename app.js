@@ -735,7 +735,7 @@ function listenInviteCodePopup(uid) {
                 
             `;
 
-            btn.textContent = "Invite & Start Earning Now";
+            btn.textContent = "Activate & Start Earning Now";
 
 btn.onclick = () => {
     const user = auth.currentUser;
