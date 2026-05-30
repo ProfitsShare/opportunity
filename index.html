@@ -55,9 +55,9 @@
         By creating an account, you agree to:
       </p>
       <ul>
-        <li>Get you invite code for ONLY ksh 200.</li>
-        <li>Then alway get ksh 100, for every friend you invite.</li>
-        <li>Recover your ksh 200 and continue earning afterwards.</li>
+        <li>Get you invite code for ONLY ksh 20.</li>
+        <li>Then alway get ksh 10, for every friend you invite.</li>
+        <li>Recover your ksh 20 and continue earning afterwards.</li>
       <p>
         NB: all unwithdrawn weekly eanings are paid in full every Wednessday.
       </p>
@@ -100,7 +100,7 @@
 <!-- SIGNUP FORM -->
 <!-- STEP 1: ENTER CODE -->
 <form id="referralStep" class="form">
-  <h1>Enter Invite Code to Continue</h1>
+  <h1>Inviter Code</h1>
 
   <input id="step_referral" type="text" placeholder="Enter Invite Code" required>
 
@@ -184,7 +184,7 @@
     <div class="sidebar">
         <h2 onclick="location.reload()">ProfitsShare</h2>
         <ul>
-            <li>Invites</li>
+            <li>View Invites</li>
             <li>Payout History</li>
             <button id="authButton" class="auth-btn-small">Logout</button>
         </ul>
@@ -224,21 +224,17 @@
             <!-- Affiliate URL Management Area -->
 <div class="invite-frame">
 
-    <!-- INFO -->
-    <div class="reward-box">
-      🎉 Invite friends & earn 50 Ksh for every successful referral!
-    </div>
 
     <div class="link-row">
         <div id="inviteMessageBox" class="invite-message-box">
             <!-- JS injects message here -->
-             Your link will Appear Here!!
+             Invite code not Unlocked !!
         </div>
     </div>
 
     <!-- Action button (JS controls behavior) -->
     <button id="getCodeBtnPopup" type="button" onclick="getCode()">
-      Start Earning Now
+      Earn +10 ksh
     </button>
 </div>
 </div>
@@ -249,7 +245,7 @@
 <div class="section referrals active">
   <div id="toptable">
    
-    <h3 onclick="openInvites()" id="meselected">Your Invites</h3>
+    <h3 onclick="openInvites()" id="meselected">View Invites</h3>
      <h3 onclick="openPayoutHistory()">Payout History</h3>
   </div>
 
@@ -271,7 +267,7 @@
 <!-- Payouts -->
 <div class="section payoutHistory">
     <div id="toptable">
-        <h3 onclick="openInvites()">Your Invites</h3>
+        <h3 onclick="openInvites()">View Invites</h3>
       <h3 onclick="openPayoutHistory()" id="meselected">Payout History</h3>
       
     </div>
@@ -358,11 +354,14 @@
     <!-- NORMAL CONTENT -->
     <div id="defaultMpesaContent">
 
-      <h2>Unlock Invite Code</h2>
+      <h2>Unlock Your Invite Code</h2>
 
       <div class="price-box">
-        <span class="big-price">100 Ksh</span>
+        <span class="big-price">20 Ksh</span>
       </div>
+      <div class="reward-box">
+       🎉 Earn Ksh 10 daily for every friend you bring 
+    </div>
 
       <button class="continue-btn" onclick="openlink()">
         Continue

@@ -257,6 +257,7 @@ transform:scale(1.05);
 .account {
     background: #1a1a1a;
     padding: 20px;
+    padding-bottom: 3px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
@@ -357,6 +358,7 @@ transform:scale(1.05);
 
 .section.active {
     display: block;
+    margin-bottom: 160px;
 }
 
 /* =========================
@@ -2508,12 +2510,12 @@ color: #0f172a;
 text-align: left;
     font-size: 19px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
 }
 
 /* PRICE */
 .price-box{
-    margin-bottom: 30px;
+    margin-bottom: 8px;
     text-align: left;
 }
 
@@ -2528,8 +2530,8 @@ text-align: left;
 .reward-box{
     background: #131313;
     color: #09e05c;
-
-    padding: 20px;
+    font-style: italic;
+    padding: 7px;
     border-radius: 16px;
 
     font-size: 16px;
@@ -2584,7 +2586,7 @@ text-align: left;
      text-align: left;
     font-size: 19px;
     font-weight: 700;
-    margin-bottom: 12px;
+    margin-bottom: 7px;
     }
 
     .big-price{

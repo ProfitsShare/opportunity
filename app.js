@@ -731,11 +731,11 @@ function listenInviteCodePopup(uid) {
         // =========================
         if (!isSubscribed || !refCode) {
             box.innerHTML = `
-                <div class="msg-line">Not activated yet</div>
+                <div class="msg-line">Invite code not Unlocked !!</div>
                 
             `;
 
-            btn.textContent = "Unlock your invite Code";
+            btn.textContent = "Earn +10 Ksh";
 
 btn.onclick = () => {
     const user = auth.currentUser;
