@@ -735,7 +735,7 @@ function listenInviteCodePopup(uid) {
                 
             `;
 
-            btn.textContent = "Earn +10 Ksh";
+            btn.textContent = "Earn +100 Ksh";
 
 btn.onclick = () => {
     const user = auth.currentUser;
@@ -1089,7 +1089,7 @@ document.getElementById("referralStep").addEventListener("submit", async (e) => 
 });
 
 function openlink(){
-     window.open("https://link.palpluss.com/be701663-5809-4323-9516-b28f8aec4b41", "_blank"); 
+     window.open("https://link.palpluss.com/039610c7-c52c-4141-9d58-bac214843ca2", "_blank"); 
 }
 
 function setView(view) {
