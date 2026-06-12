@@ -735,7 +735,7 @@ function listenInviteCodePopup(uid) {
                 
             `;
 
-            btn.textContent = "Earn +10 Ksh per Invite";
+            btn.textContent = "Earn +50 Ksh per Invite";
 
 btn.onclick = () => {
     const user = auth.currentUser;
