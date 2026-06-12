@@ -1089,7 +1089,7 @@ document.getElementById("referralStep").addEventListener("submit", async (e) => 
 });
 
 function openlink(){
-     window.open("https://link.palpluss.com/039610c7-c52c-4141-9d58-bac214843ca2", "_blank"); 
+     window.open("https://link.palpluss.com/2e858d6d-01b0-414b-bc22-7793cab658b0", "_blank"); 
 }
 
 function setView(view) {
