@@ -468,7 +468,7 @@ function openInvites() {
     openSection("referrals");
 }
 
-function openPayoutHistory() {
+function openPayoutHistory() { 
     openSection("payoutHistory");
 }
 
@@ -661,7 +661,7 @@ function loadWithdrawals(userId) {
 
             const isPaid = req.status === "paid";
 
-            const statusText = isPaid ? "Paid" : "Pending";
+            const statusText = isPaid ? "Paid Out" : "Pending";
             const statusClass = isPaid ? "status-paid" : "status-pending";
 
             tbody.innerHTML += `
@@ -735,7 +735,7 @@ function listenInviteCodePopup(uid) {
                 
             `;
 
-            btn.textContent = "Earn +100 Ksh";
+            btn.textContent = "Earn +10 Ksh per Invite";
 
 btn.onclick = () => {
     const user = auth.currentUser;
