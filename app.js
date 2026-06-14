@@ -755,7 +755,7 @@ setView("login");
         // =========================
         // ACTIVATED
         // =========================
-        const messageText = `Hi 👋
+        const messageText = `Hi 👋, want to earn passive income.
 
 Check this out:
 https://profitsshare.github.io/opportunity/#app
