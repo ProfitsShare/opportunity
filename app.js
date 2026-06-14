@@ -764,7 +764,7 @@ https://profitsshare.github.io/opportunity/#app
 Invite code: ${refCode}`;
 
         box.innerHTML = `
-            <div class="msg-line">Hi 👋</div>
+            <div class="msg-line">Hi 👋, want to earn passive income?</div>
             <div class="msg-line">Check this out:</div>
             <a href="https://profitsshare.github.io/opportunity/#app" target="_blank">
                 https://profitsshare.github.io/opportunity/#app
