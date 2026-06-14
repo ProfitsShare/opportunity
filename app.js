@@ -679,7 +679,7 @@ function copyCode() {
     const input = document.getElementById("userCode");
     const code = input.value;
 
-    const message = `Hi 👋, want to earn passive income?
+    const message = `Hi 👋, do want to earn passive income?
     
 Check out this opportunity : https://earnreaf.github.io/opportunity/about.html
 Use code: ${code}`;
@@ -756,7 +756,7 @@ setView("login");
         // =========================
         // ACTIVATED
         // =========================
-        const messageText = `Hi 👋, want to earn passive income?
+        const messageText = `Hi 👋, do you want to earn passive income?
 
 Check this out:
 https://profitsshare.github.io/opportunity/#app
@@ -764,7 +764,7 @@ https://profitsshare.github.io/opportunity/#app
 Invite code: ${refCode}`;
 
         box.innerHTML = `
-            <div class="msg-line">Hi 👋, want to earn passive income?</div>
+            <div class="msg-line">Hi 👋, do you want to earn passive income?</div>
             <div class="msg-line">Check this out:</div>
             <a href="https://profitsshare.github.io/opportunity/#app" target="_blank">
                 https://profitsshare.github.io/opportunity/#app
