@@ -2526,6 +2526,79 @@ text-align: left;
 }
 
 
+/* Wrapper */
+.pdf-container{
+    width:96%;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+/* Reusable Card */
+.pdf-item{
+    width:100%;
+    background:#353535;
+    border-radius:18px;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom: 20px;
+}
+
+.pdf-left{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    flex:1;
+}
+
+.pdf-icon{
+    width:8px;
+    height:8px;
+    border-radius:15px;
+    background:#1d1d1d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:30px;
+    flex-shrink:0;
+}
+
+.pdf-info{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+}
+
+.pdf-title{
+    color:white;
+    font-size:13px;
+    font-weight:600;
+}
+
+.pdf-price{
+    color:#00ff99;
+    font-size:14px;
+}
+
+.pdf-read{
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(90deg,#ff0055,#ff6600);
+    padding:8px;
+    border-radius:8px;
+    font-size:14px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.pdf-read:hover{
+    transform:scale(1.05);
+}
+
+
 /* INFO BOX */
 .reward-box{
     background: #131313;
