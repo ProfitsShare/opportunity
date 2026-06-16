@@ -801,7 +801,7 @@ Use my referral code: ${refCode}`;
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
 
-        btn.textContent = "Copy Message";
+        btn.textContent = "Copy & Share Message";
 
         // IMPORTANT: remove old handlers safely
         btn.onclick = () => {
@@ -809,7 +809,7 @@ Use my referral code: ${refCode}`;
                 .then(() => {
                     btn.textContent = "Copied ✅";
                     setTimeout(() => {
-                        btn.textContent = "Copy Message";
+                        btn.textContent = "Copy & Share Message";
                     }, 1500);
                 })
                 .catch(() => alert("Copy failed"));
