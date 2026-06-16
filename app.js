@@ -117,7 +117,7 @@ if (pdfBtn) {
             e.preventDefault();
 
             // open your pdf
-            window.open("https://profitsshare.github.io/opportunity/reader.html", "_blank");
+            window.open("https://drive.google.com/file/d/1hKbJoGor5R-AwWvtiv4LJVZbFWH-KFXr/view?usp=sharing", "_blank");
         };
 
     } else {
