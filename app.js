@@ -111,7 +111,7 @@ if (pdfBtn) {
     if (data.isSubscribed === true) {
 
         // user has paid
-        pdfBtn.textContent = "Read";
+        pdfBtn.textContent = "Open";
 
         pdfBtn.onclick = (e) => {
             e.preventDefault();
