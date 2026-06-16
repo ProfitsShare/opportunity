@@ -103,7 +103,37 @@ function loadUserData(userId) {
 document.getElementById("balance").innerText =
     "KSH " + Number(data.balance || 0).toFixed(2);
 
+// PDF button
+const pdfBtn = document.getElementById("pdfReadBtn");
 
+if (pdfBtn) {
+
+    if (data.isSubscribed === true) {
+
+        // user has paid
+        pdfBtn.textContent = "Read";
+
+        pdfBtn.onclick = (e) => {
+            e.preventDefault();
+
+            // open your pdf
+            window.open("https://profitsshare.github.io/opportunity/reader.html", "_blank");
+        };
+
+    } else {
+
+        // user not subscribed
+        pdfBtn.textContent = "Get";
+
+        pdfBtn.onclick = (e) => {
+            e.preventDefault();
+
+            // show mpesa popup
+            openMpesa();
+        };
+
+    }
+}
         hideLoader();
     });
 }
@@ -679,8 +709,7 @@ function copyCode() {
     const input = document.getElementById("userCode");
     const code = input.value;
 
-    const message = `Hi 👋, do want to earn passive income?
-    
+    const message = `Hi 👋, do you want to earn passive income?
 Check out this opportunity : https://earnreaf.github.io/opportunity/about.html
 Use code: ${code}`;
 
@@ -761,7 +790,7 @@ setView("login");
 Check this out:
 https://profitsshare.github.io/opportunity/#app
 
-Invite code: ${refCode}`;
+Use my referral code: ${refCode}`;
 
         box.innerHTML = `
             <div class="msg-line">Hi 👋, do you want to earn passive income?</div>
