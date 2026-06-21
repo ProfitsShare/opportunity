@@ -101,7 +101,7 @@ function loadUserData(userId) {
             "👤 @" + (data.name || "User");
 
 document.getElementById("balance").innerText =
-    "KSH " + Number(data.balance || 0).toFixed(2);
+    "Ksh " + Number(data.balance || 0).toFixed(2);
 
 // PDF button
 const pdfBtn = document.getElementById("pdfReadBtn");
@@ -113,12 +113,15 @@ if (pdfBtn) {
         // user has paid
         pdfBtn.textContent = "Invite";
 
-        pdfBtn.onclick = (e) => {
-            e.preventDefault();
+pdfBtn.onclick = (e) => {
+    e.preventDefault();
 
-            // open your pdf
-            window.open("https://drive.google.com/file/d/1hKbJoGor5R-AwWvtiv4LJVZbFWH-KFXr/view?usp=sharing", "_blank");
-        };
+    // Scroll to the element
+    document.getElementById("getCodeBtnPopup").scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+};
 
     } else {
 
@@ -696,7 +699,7 @@ function loadWithdrawals(userId) {
 
             tbody.innerHTML += `
                 <tr>
-                    <td>KSH ${req.amount}</td>
+                    <td>Ksh ${req.amount}</td>
                     <td>${req.phoneNumber}</td>
                     <td class="${statusClass}">${statusText}</td>
                 </tr>
@@ -733,7 +736,7 @@ function fitCodeInput() {
 function clearUI() {
 
     document.getElementById("username").innerText = "👤 @ user";
-    document.getElementById("balance").innerText = "KSH 0.00";
+    document.getElementById("balance").innerText = "Ksh 0.00";
 
     const codeInput = document.getElementById("userCode");
     if (codeInput) codeInput.value = "";
@@ -801,7 +804,7 @@ Use my referral code: ${refCode}`;
             <div class="msg-code">Code: <b>${refCode}</b></div>
         `;
 
-        btn.textContent = "Copy & Share Message";
+        btn.textContent = "Copy & Share Invite Message";
 
         // IMPORTANT: remove old handlers safely
         btn.onclick = () => {
@@ -809,7 +812,7 @@ Use my referral code: ${refCode}`;
                 .then(() => {
                     btn.textContent = "Copied ✅";
                     setTimeout(() => {
-                        btn.textContent = "Copy & Share Message";
+                        btn.textContent = "Copy & Share Invite Message";
                     }, 1500);
                 })
                 .catch(() => alert("Copy failed"));
