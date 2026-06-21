@@ -2215,7 +2215,7 @@ display: none;
         }
 
     #getCodeBtnPopup{
-    background-color: #10b981;
+    background-color: #1a9b52;
     color: white;
         width: 100%;
     border: none;
@@ -2267,7 +2267,7 @@ display: none;
     padding: 12px;
     border-radius: 10px;
     border: none;
-    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    background:#1a9b52;
     color: #fff;
     font-weight: 500;
     cursor: pointer;
