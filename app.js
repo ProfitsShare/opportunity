@@ -793,7 +793,7 @@ setView("login");
 Check this out:
 https://profitsshare.github.io/opportunity/#app
 
-Use my referral code: ${refCode}`;
+Use my Invite code: ${refCode}`;
 
         box.innerHTML = `
             <div class="msg-line">Hi 👋, do you want to earn passive income?</div>
