@@ -111,7 +111,7 @@ if (pdfBtn) {
     if (data.isSubscribed === true) {
 
         // user has paid
-        pdfBtn.textContent = "Open";
+        pdfBtn.textContent = "Invite";
 
         pdfBtn.onclick = (e) => {
             e.preventDefault();
@@ -123,7 +123,7 @@ if (pdfBtn) {
     } else {
 
         // user not subscribed
-        pdfBtn.textContent = "Get";
+        pdfBtn.textContent = "Join Now";
 
         pdfBtn.onclick = (e) => {
             e.preventDefault();
